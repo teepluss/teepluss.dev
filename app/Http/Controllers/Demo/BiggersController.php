@@ -14,7 +14,7 @@ class BiggersController extends Controller
     {
         $cloud = new GoogleCloud\ServiceBuilder([
             'projectId' => 'teepluss-app1',
-            'keyFilePath' => storage_path('bigquery-6bdf5d34509e.json'),
+            'keyFilePath' => storage_path('authkey/bigquery-6bdf5d34509e.json'),
             'scopes' => [
                 GoogleCloud\BigQuery\BigQueryClient::SCOPE,
                 GoogleCloud\BigQuery\BigQueryClient::INSERT_SCOPE
