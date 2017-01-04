@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/broadcast', 'BroadcastController@index');
+Route::get('/broadcast/chat', 'BroadcastController@chat');
 
 
 Route::resource('forms', 'FormsController');

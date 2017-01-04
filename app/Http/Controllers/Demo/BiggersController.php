@@ -26,7 +26,7 @@ class BiggersController extends Controller
 
     public function index()
     {
-        $query = 'SELECT id, name, email FROM [teepluss-app1:users.users] GROUP BY id,name,email ORDER BY id ASC LIMIT 1000';
+        $query = 'SELECT id, name, email FROM [teepluss-app1:users.users] WHERE name LIKE "%Pa%" GROUP BY id,name,email ORDER BY id ASC LIMIT 1000';
 
         $options = ['useLegacySql' => true];
         $queryResults = $this->bigQuery->runQuery($query, $options);

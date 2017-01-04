@@ -19,7 +19,7 @@ class NotificationsController extends Controller
         $user = User::find(1);
         broadcast(new ServerCreated($user, [
             'text' => 'Something to talk'
-        ]));
+        ]))->toOthers();
 
         return 'OK';
     }
@@ -45,7 +45,7 @@ class NotificationsController extends Controller
         $user = User::find(1);
         broadcast(new ServerCreated($user, [
             'text' => 'Something to talk'
-        ]));
+        ]))->toOthers();
 
         return ['OK'];
     }

@@ -13,10 +13,11 @@ class BroadcastController extends Controller
 
     public function index()
     {
-        // $user = request()->user();
-
-        // broadcast(new \App\Events\ServerCreated($user, ['text' => 'Say hi to me']))->toOthers();
-
         return view('pages.broadcast.index');
+    }
+
+    public function chat()
+    {
+        return view('pages.broadcast.chat');
     }
 }

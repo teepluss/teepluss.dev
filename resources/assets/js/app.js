@@ -16,6 +16,7 @@ require('./bootstrap');
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('inform', require('./components/Inform.vue'));
 Vue.component('broadcast', require('./components/Broadcast.vue'));
+Vue.component('chatlist', require('./components/Chatlist.vue'));
 Vue.component('form-request', require('./components/forms/Request.vue'));
 
 const app = new Vue({

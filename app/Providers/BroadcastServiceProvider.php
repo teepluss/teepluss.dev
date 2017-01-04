@@ -22,5 +22,13 @@ class BroadcastServiceProvider extends ServiceProvider
         Broadcast::channel('order.*', function ($user, $userId) {
             return (int) $user->id === (int) $userId;
         });
+
+        /**
+         * Validate chatroom
+         */
+        Broadcast::channel('chatroom.*', function ($user, $roomId) {
+            // $roomId is from the *
+            return (int) $roomId === 1;
+        });
     }
 }

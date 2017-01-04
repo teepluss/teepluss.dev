@@ -18,10 +18,18 @@
     },
     mounted () {
       const userId = 1;
+
+      // Private
       Echo.private('order.' + userId)
         .listen('ServerCreated', (e) => {
             this.messages.push(e.message)
         });
+
+      // Public
+      // Echo.channel('order.' + userId)
+      //   .listen('ServerCreated', (e) => {
+      //       this.messages.push(e.message)
+      //   });
     },
     methods: {
       broadcast () {

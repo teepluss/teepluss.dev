@@ -15,4 +15,6 @@ use Illuminate\Http\Request;
 
 
 Route::resource('user', 'Api\UserController');
+Route::resource('daemon', 'Api\DaemonController');
+Route::resource('messages', 'Api\MessagesController');
 Route::resource('notifications', 'Api\NotificationsController');

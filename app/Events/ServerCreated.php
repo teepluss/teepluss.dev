@@ -37,6 +37,10 @@ class ServerCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
+        // Public
+        // return ['order.'.$this->user->id];
+
+        // Private
         return new PrivateChannel('order.'.$this->user->id);
     }
 }
